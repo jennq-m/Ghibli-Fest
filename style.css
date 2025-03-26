@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    height: 70px; /* Ensure fixed height */
+    height: 70px; 
 }
 
 .logo {
@@ -51,40 +51,39 @@
     color: #99BC85;
 }
 
-/* Register Button */
+/* Floating Register Button */
 .register-btn {
+    position: fixed;
+    right: 20px;  
+    bottom: 20px; 
     background: rgba(164, 180, 101, 1.0);
     padding: 12px 20px;
-    color: #394705; /* Darker text color */
-    border-radius: 8px;
+    color: #394705; 
+    border-radius: 50px; 
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
-    border: none;
+    border: 2.5px solid #2f3b07;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     box-shadow: 0 0 10px rgba(47, 58, 2, 0.5);
     animation: pulse 1.5s infinite;
-    border: 2.5px solid #2f3b07;
+    z-index: 1000; 
 }
 
-/* Hover Effect fore Register Button */
+/* Hover Effect */
 .register-btn:hover {
     background: #8F9F55;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(47, 58, 2, 0.5);
-}
-/* Animation Loop */ 
-@keyframes gradientShift {
-    0% { background: linear-gradient(45deg, #A4B465, #6A913D); }
-    50% { background: linear-gradient(45deg, #6A913D, #A4B465); }
-    100% { background: linear-gradient(45deg, #A4B465, #6A913D); }
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(47, 58, 2, 0.8);
 }
 
-.register-btn {
-    animation: gradientShift 3s infinite alternate;
+/* Floating Effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
-
 
 /* Hamburger Menu Button */
 .menu-toggle {
