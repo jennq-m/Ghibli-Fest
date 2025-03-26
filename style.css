@@ -1,0 +1,246 @@
+/* Reset/Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #626F47; 
+    color: #D4E7C5;
+    font-family: "Georgia", serif;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px; /* Ensure fixed height */
+}
+
+.logo {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #D4E7C5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #99BC85;
+}
+
+/* Register Button */
+.register-btn {
+    background: rgba(164, 180, 101, 1.0);
+    padding: 12px 20px;
+    color: #394705; /* Darker text color */
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 0 10px rgba(47, 58, 2, 0.5);
+    animation: pulse 1.5s infinite;
+    border: 2.5px solid #2f3b07;
+}
+
+/* Hover Effect fore Register Button */
+.register-btn:hover {
+    background: #8F9F55;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(47, 58, 2, 0.5);
+}
+/* Animation Loop */ 
+@keyframes gradientShift {
+    0% { background: linear-gradient(45deg, #A4B465, #6A913D); }
+    50% { background: linear-gradient(45deg, #6A913D, #A4B465); }
+    100% { background: linear-gradient(45deg, #A4B465, #6A913D); }
+}
+
+.register-btn {
+    animation: gradientShift 3s infinite alternate;
+}
+
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2f3b07;
+    padding: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; 
+    }
+    .menu-toggle {
+        display: block; 
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(39, 46, 13, 0.6); 
+        text-align: center;
+        padding: 20px 0;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensures full screen coverage */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body, .hero {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Prevents white gaps */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(164, 180, 101, 0.8); 
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 800px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    border: 2px solid #102401; 
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-family: "Garamond", serif;
+    margin-bottom: 15px;
+}
+
+.hero .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: "Gabriola", serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.event {
+    font-size: 1.8em; font-weight: bold;
+    color: #D4E7C5;
+    text-align: center;
+    width: 90%; 
+    max-width: 800px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .quote {
+        font-size: 1rem;
+    }
+
+    .hero .event-date {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #626F47;
+    color: #88AB8E;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Or 'static', but NOT absolute */
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content a {
+    color: #88AB8E; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    padding: 5px 10px;
+}
+
+.footer-content a:hover {
+    color: #D4E7C5; 
+}
+
+.footer-content i {
+    font-size: 1.4rem; 
+}
+
+
