@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Smooth Scrolling*/ 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -130,6 +135,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 body, .hero {
@@ -197,6 +203,302 @@ body, .hero {
     .hero .event-date {
         font-size: 1rem;
     }
+}
+/* About Section */
+.about {
+    background: url('assets/nature.gif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    flex: 1 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 20px;
+    padding: 100px 50px 100px 50px; 
+}
+
+.about-content {
+    max-width: 650px;
+    padding: 20px;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.3s ease-in-out;
+    border-radius: 15px; 
+    color: #1e3f02;
+    border: 2px solid #102401;
+}
+
+.about-content:hover {
+    background: rgba(164, 180, 101, 1.0);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    color: #f5f5f5;
+}
+
+.about h1 {
+    font-size: 2rem;
+    font-family: "Garamond", serif;
+    margin-bottom: 15px;
+}
+
+.about .details {
+    font-size: 1rem;
+    font-family: "Georgia", serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/*Performers Section*/
+
+.keynote {
+    background: url('assets/neko.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 50px;
+}
+
+.keynote-content {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(164, 180, 101, 0.9);
+    border-radius: 15px;
+    color: #27391C;
+    border: 2px solid #102401;
+}
+
+.keynote h1 {
+    font-size: 2.8rem;
+    font-family: "Garamond", serif;
+    margin-bottom: 15px;
+    color: #27391C;
+}
+
+/* Performers and Merchants Styling */
+.performers-list, .merchants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Performer Card */
+.performer-card {
+    background: #E1F0DA;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    text-align: justify;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #27391C;
+}
+
+/* Merchant Card */
+.merchant-card {
+    background: #E1F0DA;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    text-align: justify;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #5C6E3A;
+}
+
+.performer-card:hover, .merchant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.performer-card img, .merchant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #27391C;
+}
+
+.performer-card h2, .merchant-card h2 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    font-family: "Georgia", serif;
+    color: #333;
+}
+
+.performer-card p, .merchant-card p {
+    font-size: 1rem;
+    padding: 10px;
+    color: #666;
+    font-family: "Arial", sans-serif;
+}
+
+/* Responsive card for smaller screens */
+@media (max-width: 768px) {
+    .keynote {
+        padding: 50px 20px;
+    }
+    .performers-list, .merchants-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .performer-card, .merchant-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    .keynote h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .keynote {
+        padding: 30px 10px;
+    }
+    .performers-list, .merchants-list {
+        gap: 10px;
+    }
+    .performer-card, .merchant-card {
+        padding: 5px;
+    }
+    .keynote h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/*Schedule Section*/
+
+.sched {
+    background: url('assets/spirited.gif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    flex: 1 0 auto;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 20px;
+    padding: 100px 50px 100px 50px; 
+}
+
+/* Schedule */
+.sched-content {
+    max-width: 800px;
+    border: 2px solid #1c3f02;
+    padding: 20px;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.3s ease-in-out;
+    border-radius: 15px; 
+    color: #1e3f02;
+}
+
+.sched-content:hover {
+    background: rgba(164, 180, 101, 1.0);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    color: #f5f5f5;
+}
+
+.sched h1 {
+    font-size: 2rem;
+    font-family: "Garamond", serif;
+    margin-bottom: 15px;
+}
+
+.sched .details {
+    font-size: 1rem;
+    font-family: "Georgia", serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Venue Section */
+
+.ven{
+    background: url('assets/venue.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    flex: 1 0 auto;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 20px;
+    padding: 100px 50px 100px 50px; 
+}
+
+
+/* Venue */
+.ven-content {
+    max-width: 800px;
+    border: 2px solid #1c3f02;
+    padding: 20px;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.3s ease-in-out;
+    border-radius: 15px; 
+    color: #1e3f02;
+}
+
+.ven-content:hover {
+    background: rgba(164, 180, 101, 1.0);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    color: #f5f5f5;
+}
+
+.ven h1 {
+    font-size: 2rem;
+    font-family: "Garamond", serif;
+    margin-bottom: 15px;
+}
+
+.ven .details {
+    font-size: 1rem;
+    font-family: "Georgia", serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.venue-img {
+    width: auto; 
+    height: 200px; 
+    border: 2px solid #1c3f02;;
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.details {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    flex-wrap: wrap; 
 }
 
 /* Footer */
