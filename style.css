@@ -219,6 +219,18 @@ body, .hero {
     padding: 100px 50px 100px 50px; 
 }
 
+.about-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e3f02;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    border: 2px solid #102401;
+}
+
 .about-content {
     max-width: 650px;
     padding: 20px;
@@ -238,7 +250,7 @@ body, .hero {
     color: #f5f5f5;
 }
 
-.about h1 {
+.about h2 {
     font-size: 2rem;
     font-family: "Garamond", serif;
     margin-bottom: 15px;
@@ -402,7 +414,18 @@ body, .hero {
     padding: 100px 50px 100px 50px; 
 }
 
-/* Schedule */
+.sched-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e3f02;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    border: 2px solid #102401;
+}
+
 .sched-content {
     max-width: 800px;
     border: 2px solid #1c3f02;
@@ -422,7 +445,7 @@ body, .hero {
     color: #f5f5f5;
 }
 
-.sched h1 {
+.sched h2 {
     font-size: 2rem;
     font-family: "Garamond", serif;
     margin-bottom: 15px;
@@ -452,8 +475,18 @@ body, .hero {
     padding: 100px 50px 100px 50px; 
 }
 
+.venue-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e3f02;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    border: 2px solid #102401;
+}
 
-/* Venue */
 .ven-content {
     max-width: 800px;
     border: 2px solid #1c3f02;
@@ -473,7 +506,7 @@ body, .hero {
     color: #f5f5f5;
 }
 
-.ven h1 {
+.ven h2 {
     font-size: 2rem;
     font-family: "Garamond", serif;
     margin-bottom: 15px;
